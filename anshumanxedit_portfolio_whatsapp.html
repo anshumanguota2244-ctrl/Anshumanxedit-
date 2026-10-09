@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AnshumanXEdit — video editing for YouTube videos, Shorts, Reels and motion graphics." />
+  <title>AnshumanXEdit | Video Editor Portfolio</title>
+  <style>
+    :root{--bg:#070a12;--panel:#0d1322;--panel2:#101a2d;--text:#f4f7ff;--muted:#a5b0c5;--blue:#39a7ff;--cyan:#65e4ff;--line:rgba(150,180,230,.17)}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(ellipse at 75% 0%,#102443 0%,transparent 36%),var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,91%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,10,18,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-weight:900;letter-spacing:-.6px;font-size:1.1rem}.logo span{color:var(--blue)}
+    .navlinks{display:flex;gap:22px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:white}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#04101e;font-weight:800;border:0;cursor:pointer;transition:transform .2s}
+    .btn:hover{transform:translateY(-2px)}.btn.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}
+    .hero{padding:88px 0 72px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;min-height:570px}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;padding:7px 12px;border:1px solid rgba(57,167,255,.35);background:rgba(57,167,255,.08);border-radius:999px;color:#a9dcff;font-size:.8rem;font-weight:700}
+    .dot{width:7px;height:7px;border-radius:50%;background:#53e6a4;box-shadow:0 0 12px #53e6a4}
+    h1{font-size:clamp(2.8rem,6.4vw,5.2rem);line-height:1.02;letter-spacing:-3px;margin:23px 0}h1 .gradient{background:linear-gradient(100deg,#fff 15%,var(--blue) 62%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:1.1rem;color:var(--muted);max-width:590px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:29px 0 25px}
+    .trust{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.86rem}.trust b{color:white}
+    .visual{position:relative;min-height:360px;display:grid;place-items:center}.orb{position:absolute;width:290px;height:290px;border-radius:50%;background:linear-gradient(135deg,rgba(57,167,255,.3),rgba(101,228,255,.03))}
+    .editor-card{position:relative;width:min(100%,390px);padding:20px;border:1px solid rgba(132,189,255,.25);border-radius:22px;background:linear-gradient(145deg,rgba(20,35,60,.96),rgba(9,14,25,.96));box-shadow:0 28px 90px rgba(0,0,0,.42);transform:rotate(2deg)}
+    .screen{height:210px;border-radius:14px;background:linear-gradient(135deg,#0b1830,#173d68 50%,#07101e);position:relative;overflow:hidden;display:grid;place-items:center;border:1px solid rgba(255,255,255,.1)}
+    .screen:before,.screen:after{content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(101,228,255,.3);border-radius:50%;transform:rotate(-25deg) scaleX(1.4)}.screen:after{width:170px;height:170px;transform:rotate(35deg) scaleX(1.5)}
+    .play{z-index:1;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);font-size:1.4rem;padding-left:4px}
+    .screen-label{position:absolute;bottom:15px;left:16px;font-weight:900;letter-spacing:2px;font-size:.76rem;color:#cdeaff}
+    .timeline{margin-top:18px;display:grid;gap:9px}.track{display:flex;gap:5px;height:11px}.track span{border-radius:4px;background:linear-gradient(90deg,#1875ca,#62dfff);display:block}.track:nth-child(2) span{background:linear-gradient(90deg,#7545d8,#f36ed2)}.track:nth-child(3) span{background:linear-gradient(90deg,#2eaa83,#86f5bc)}
+    .section{padding:76px 0}.section-head{max-width:680px;margin-bottom:30px}.kicker{color:var(--cyan);font-size:.78rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+    h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-1.2px;line-height:1.15;margin:10px 0 13px}.sub{color:var(--muted)}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:24px;border-radius:17px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(16,26,45,.92),rgba(10,15,27,.92))}
+    .iconbox{width:46px;height:46px;border-radius:12px;background:rgba(57,167,255,.12);border:1px solid rgba(57,167,255,.24);display:grid;place-items:center;font-size:1.3rem;margin-bottom:20px}
+    .card h3{font-size:1.12rem;margin-bottom:8px}.card p{color:var(--muted);font-size:.94rem}
+    .portfolio-tools{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0;padding:20px;border:1px solid var(--line);border-radius:17px;background:rgba(13,19,34,.78)}
+    label{display:block;font-size:.88rem;font-weight:700;margin-bottom:7px}input,select{width:100%;background:#080e1a;color:var(--text);border:1px solid rgba(150,180,230,.25);border-radius:9px;padding:12px;font:inherit;min-width:0}input::placeholder{color:#75839b}
+    .full{grid-column:1/-1}.form-actions{display:flex;gap:10px;flex-wrap:wrap}.hint{font-size:.82rem;color:var(--muted);margin-top:9px}
+    .workgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.work{border-radius:17px;overflow:hidden;border:1px solid var(--line);background:var(--panel);transition:transform .2s,border-color .2s}.work:hover{transform:translateY(-4px);border-color:rgba(57,167,255,.5)}
+    .thumb{height:180px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#102344,#0a0f1b)}.thumb:before{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(101,228,255,.35);border-radius:50%;box-shadow:0 0 0 24px rgba(101,228,255,.035),0 0 0 48px rgba(101,228,255,.025)}
+    .thumb.purple{background:linear-gradient(135deg,#281345,#101020)}.thumb.teal{background:linear-gradient(135deg,#073d43,#0a1522)}.thumb span{position:relative;font-size:1rem;font-weight:900;letter-spacing:2px;text-align:center;text-shadow:0 4px 18px #000}
+    .video-frame{width:100%;aspect-ratio:16/9;border:0;display:block;background:#000}.work-info{padding:17px}.work-info h3{font-size:1rem}.work-info p{color:var(--muted);font-size:.85rem;margin-top:5px}
+    .empty{grid-column:1/-1;padding:25px;border:1px dashed rgba(150,180,230,.3);border-radius:15px;color:var(--muted);text-align:center}
+    .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:center}.about-panel{padding:30px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#101b30,#0a0e18)}
+    .bigmark{font-size:3.2rem;font-weight:950;letter-spacing:-3px;line-height:1.1}.bigmark span{color:var(--blue)}.skill-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:19px}.pill{border:1px solid var(--line);padding:7px 11px;border-radius:999px;color:#d3e0f5;font-size:.84rem;background:rgba(255,255,255,.025)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step-num{font-size:.78rem;color:var(--cyan);font-weight:900;letter-spacing:1px}
+    .cta{padding:42px;border-radius:23px;border:1px solid rgba(57,167,255,.3);background:radial-gradient(ellipse at 100% 0%,rgba(57,167,255,.17),transparent 45%),linear-gradient(135deg,#101b30,#090d17);display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .cta p{color:var(--muted);max-width:620px;margin-top:8px}footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:62px;gap:20px}.visual{min-height:310px}.grid3,.workgrid,.steps{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.cta{padding:30px;align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.navlinks a:nth-child(2){display:none}}
+    @media(max-width:560px){nav{height:64px}.navlinks{display:none}.hero{padding:50px 0} .grid3,.workgrid,.steps,.portfolio-tools{grid-template-columns:1fr}h1{letter-spacing:-2px}.section{padding:55px 0}.editor-card{padding:13px}.screen{height:185px}.trust{gap:12px}.cta{padding:23px}.full{grid-column:auto}}
+  </style>
+</head>
+<body>
+<header><nav class="wrap"><a class="logo" href="#home">ANSHUMAN<span>XEDIT</span></a><div class="navlinks"><a href="#services">Services</a><a href="#work">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a></div><a class="btn" href="#contact">Hire Me ↗</a></nav></header>
+<main>
+<section class="hero wrap" id="home">
+  <div><div class="eyebrow"><span class="dot"></span> VIDEO EDITOR · OPEN FOR PROJECTS</div><h1>Make every<br>frame <span class="gradient">count.</span></h1><p class="lead">I edit engaging videos that help creators hold attention, tell better stories, and make their content stand out — from YouTube videos to scroll-stopping Shorts and Reels.</p><div class="actions"><a class="btn" href="#work">Explore My Work ↘</a><a class="btn secondary" href="#contact">Let's Work Together</a></div><div class="trust"><span>✦ <b>YouTube Editing</b></span><span>✦ <b>Short-form Content</b></span><span>✦ <b>Motion Graphics</b></span></div></div>
+  <div class="visual"><div class="orb"></div><div class="editor-card"><div class="screen"><div class="play">▶</div><div class="screen-label">YOUR STORY. MY EDIT.</div></div><div class="timeline"><div class="track"><span style="width:28%"></span><span style="width:18%"></span><span style="width:32%"></span><span style="width:16%"></span></div><div class="track"><span style="width:18%"></span><span style="width:27%"></span><span style="width:16%"></span><span style="width:31%"></span></div><div class="track"><span style="width:35%"></span><span style="width:22%"></span><span style="width:26%"></span></div></div></div></div>
+</section>
+<section class="section wrap" id="services"><div class="section-head"><div class="kicker">What I do</div><h2>Editing built around your goals.</h2><p class="sub">Clean pacing, thoughtful visuals, and a style that fits your audience and platform.</p></div><div class="grid3">
+<article class="card"><div class="iconbox">▶</div><h3>YouTube Videos</h3><p>Structured long-form edits with engaging pacing, clean cuts, sound design, captions, and visual support.</p></article>
+<article class="card"><div class="iconbox">▣</div><h3>Shorts & Reels</h3><p>Vertical edits with strong hooks, readable captions, punchy cuts, and platform-ready 9:16 framing.</p></article>
+<article class="card"><div class="iconbox">✳</div><h3>Motion Graphics</h3><p>Animated titles, kinetic text, transitions, and motion elements that make key moments easier to follow.</p></article>
+</div></section>
+<section class="section wrap" id="work">
+<div class="section-head"><div class="kicker">Selected work</div><h2>Let the work speak.</h2><p class="sub">Add YouTube links or choose video files from your device. You can showcase both on the same portfolio.</p></div>
+<div class="portfolio-tools">
+  <div><label for="projectTitle">Project title</label><input id="projectTitle" placeholder="e.g. Cinematic YouTube Edit" maxlength="80"></div>
+  <div><label for="projectType">Project type</label><select id="projectType"><option>YouTube Video</option><option>Shorts / Reels</option><option>Motion Graphics</option><option>Other Edit</option></select></div>
+  <div class="full"><label for="youtubeUrl">YouTube video link (optional)</label><input id="youtubeUrl" type="url" placeholder="https://www.youtube.com/watch?v=..."></div>
+  <div class="full"><label for="videoFile">Or select a video file (MP4, WebM, MOV)</label><input id="videoFile" type="file" accept="video/*"><p class="hint">Local video files preview in this browser only. To show them to everyone after publishing, host the video online and use its public URL. Your browser may clear locally added projects when site data is cleared.</p></div>
+  <div class="full form-actions"><button class="btn" id="addProject" type="button">＋ Add to Portfolio</button><button class="btn secondary" id="clearForm" type="button">Clear fields</button></div>
+  <p id="status" class="hint full" aria-live="polite"></p>
+</div>
+<div class="workgrid" id="workGrid">
+  <div class="empty" id="emptyState">Your projects will appear here. Add a YouTube link or select a video file above to get started.</div>
+</div>
+<p class="hint">Note: only add videos you own or have permission to showcase.</p>
+</section>
+<section class="section wrap" id="about"><div class="about">
+<div class="about-panel"><div class="kicker">The editor behind the timeline</div><div class="bigmark">Anshuman<span>X</span>Edit</div><p class="sub" style="margin-top:16px">Creative editing for creators who want to communicate clearly and keep viewers watching.</p><div class="skill-list"><span class="pill">Storytelling</span><span class="pill">Captions</span><span class="pill">Sound Design</span><span class="pill">Transitions</span><span class="pill">Motion Graphics</span></div></div>
+<div><div class="kicker">About me</div><h2>Good editing should feel effortless.</h2><p class="sub">I’m Anshuman, the editor behind AnshumanXEdit. I help creators turn raw footage into polished, audience-friendly videos. My focus is on clear storytelling, strong pacing, and details that make content feel intentional.</p><p class="sub" style="margin-top:14px">Have a channel, brand, or idea in mind? Share your goal and footage, and we can discuss an edit that fits your content.</p></div>
+</div></section>
+<section class="section wrap"><div class="section-head"><div class="kicker">Simple workflow</div><h2>From raw footage to ready to post.</h2></div><div class="steps">
+<article class="card"><div class="step-num">01 / BRIEF</div><h3 style="margin:10px 0 8px">Understand the goal</h3><p>We discuss the platform, audience, reference style, deadline, and deliverables.</p></article>
+<article class="card"><div class="step-num">02 / EDIT</div><h3 style="margin:10px 0 8px">Build the story</h3><p>I shape the footage with pacing, visuals, audio, captions, and motion where needed.</p></article>
+<article class="card"><div class="step-num">03 / DELIVER</div><h3 style="margin:10px 0 8px">Review and export</h3><p>You review the cut, share feedback, and receive the agreed final export.</p></article>
+</div></section>
+<section class="section wrap" id="contact"><div class="cta"><div><div class="kicker">Have a project?</div><h2>Let’s make something worth watching.</h2><p>Send your project details, video type, reference link, and deadline. I’ll get back to you to discuss the next steps.</p></div><a class="btn" href="https://wa.me/916200207997?text=Hi%20AnshumanXEdit%2C%20I%20want%20to%20discuss%20a%20video%20editing%20project." target="_blank" rel="noopener noreferrer">WhatsApp Me ↗</a></div><p class="hint">WhatsApp: <a href="https://wa.me/916200207997" target="_blank" rel="noopener noreferrer">+91 62002 07997</a> · Tap “WhatsApp Me” to contact me about a project.</p></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> AnshumanXEdit. All rights reserved.</span><span>Made for creators. Edited with intent.</span></div></footer>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const titleInput = document.getElementById('projectTitle');
+const typeInput = document.getElementById('projectType');
+const urlInput = document.getElementById('youtubeUrl');
+const fileInput = document.getElementById('videoFile');
+const grid = document.getElementById('workGrid');
+const statusEl = document.getElementById('status');
+let localUrls = [];
+function youtubeEmbed(raw) {
+  try {
+    const u = new URL(raw);
+    let id = '';
+    if (u.hostname === 'youtu.be' || u.hostname.endsWith('.youtu.be')) id = u.pathname.slice(1).split('/')[0];
+    else if (u.hostname.includes('youtube.com')) {
+      if (u.pathname === '/watch') id = u.searchParams.get('v') || '';
+      else if (u.pathname.startsWith('/embed/')) id = u.pathname.split('/')[2] || '';
+      else if (u.pathname.startsWith('/shorts/')) id = u.pathname.split('/')[2] || '';
+      else if (u.pathname.startsWith('/live/')) id = u.pathname.split('/')[2] || '';
+    }
+    return /^[A-Za-z0-9_-]{11}$/.test(id) ? 'https://www.youtube-nocookie.com/embed/' + id : '';
+  } catch { return ''; }
+}
+function addCard({title,type,url,videoUrl}) {
+  const card = document.createElement('article');
+  card.className = 'work';
+  if (url) {
+    const iframe = document.createElement('iframe');
+    iframe.className = 'video-frame'; iframe.src = url; iframe.title = title + ' — YouTube video';
+    iframe.loading = 'lazy'; iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; iframe.allowFullscreen = true;
+    card.appendChild(iframe);
+  } else if (videoUrl) {
+    const video = document.createElement('video');
+    video.className = 'video-frame'; video.src = videoUrl; video.controls = true; video.preload = 'metadata'; video.playsInline = true;
+    card.appendChild(video);
+  }
+  const info = document.createElement('div'); info.className = 'work-info';
+  const heading = document.createElement('h3'); heading.textContent = title;
+  const meta = document.createElement('p'); meta.textContent = type + (url ? ' · YouTube embed' : ' · Video file');
+  info.append(heading, meta); card.appendChild(info); grid.appendChild(card);
+}
+document.getElementById('addProject').addEventListener('click', () => {
+  const title = titleInput.value.trim() || 'Video Editing Sample';
+  const rawUrl = urlInput.value.trim();
+  const file = fileInput.files && fileInput.files[0];
+  const embed = rawUrl ? youtubeEmbed(rawUrl) : '';
+  if (rawUrl && !embed) { statusEl.textContent = 'Please enter a valid YouTube video, Shorts, or youtu.be link.'; return; }
+  if (!embed && !file) { statusEl.textContent = 'Paste a YouTube link or select a video file first.'; return; }
+  if (file && file.size > 250 * 1024 * 1024) { statusEl.textContent = 'This file is over 250 MB. Try a smaller compressed video for this local preview.'; return; }
+  const empty = document.getElementById('emptyState'); if (empty) empty.remove();
+  const videoUrl = file ? URL.createObjectURL(file) : '';
+  if (videoUrl) localUrls.push(videoUrl);
+  addCard({title, type:typeInput.value, url:embed, videoUrl});
+  statusEl.textContent = 'Project added to this page. For a public website, upload video files to online hosting and add public video links.';
+  titleInput.value = ''; urlInput.value = ''; fileInput.value = '';
+});
+document.getElementById('clearForm').addEventListener('click', () => {
+  titleInput.value = ''; urlInput.value = ''; fileInput.value = ''; statusEl.textContent = '';
+});
+</script>
+</body>
+</html>
